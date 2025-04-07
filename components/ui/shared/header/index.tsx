@@ -1,21 +1,19 @@
 import React from 'react';
-import Menu from './menu';
+import { default as MobileMenu } from './menu';
 import Image from 'next/image';
 import Link from 'next/link';
 import { APP_NAME } from '../../../../lib/constants';
-// import CategoriesDrawer from './categories-drawer';
-// import Search from './search';
+import { MainNav } from './main-nav';
 
 const Header = () => {
   return (
     <header className="w-full border-b">
       <div className="wrapper flex-between">
         <div className="flex-start">
-          {/* <CategoriesDrawer /> */}
-          <Link href="/" className="ml-2 flex-start bg-amber-600 p-2">
+          <Link href="/" className="ml-2 flex-start p-2">
             <Image
               priority={true}
-              src="/images/logo.svg"
+              src="/images/logo.png"
               width={30}
               height={30}
               alt={`${APP_NAME} logo`}
@@ -25,14 +23,10 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        <nav className=" flex gap-4">
-          <div className="nav-item flex-1">Home</div>
-          <div className="nav-item flex-1">About</div>
-          <div className="nav-item flex-1">Projects</div>
-          <div className="nav-item flex-1">Contact</div>
-        </nav>
-        <div className="hidden md:block">{/* <Search /> */}</div>
-        <Menu />
+        <div className="hidden md:block">
+          <MainNav />
+        </div>
+        <MobileMenu />
       </div>
     </header>
   );
