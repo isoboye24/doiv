@@ -227,3 +227,7 @@
 .footer-bg {
   background-color: oklch(0.129 0.042 264.695) !important;
 }
+
+.bg-main-green {
+  background-color: oklch(45.2% 0.095 166.913);
+}

@@ -7,7 +7,7 @@ import { MainNav } from './main-nav';
 
 const Header = () => {
   return (
-    <header className="w-full border-b">
+    <header className="w-full ">
       <div className="wrapper flex-between">
         <div className="flex-start">
           <Link href="/" className="ml-2 flex-start p-2">
