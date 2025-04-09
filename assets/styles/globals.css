@@ -220,8 +220,24 @@
   color: #ffffff !important;
 }
 
-.upload-field .text-white {
+.custom-bg-black {
   color: #000 !important;
+}
+
+.custom-bg-black:hover {
+  color: #303030 !important;
+}
+
+.custom-bg-white {
+  color: #ffffff !important;
+}
+
+.custom-text-white {
+  color: #f7f7f7 !important;
+}
+
+.custom-text-black {
+  color: #000000 !important;
 }
 
 .footer-bg {

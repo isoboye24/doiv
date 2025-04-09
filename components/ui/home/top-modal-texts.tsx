@@ -9,16 +9,18 @@ const TopModalTexts = () => {
       <div className="grid grid-rows-[4fr, 1fr] items-center md:bg-amber-500 justify-center z-12 mt-7 sm:mt-0 rounded-tr-4xl rounded-br-4xl">
         <div className="flex">
           <div className="grid text-center ">
-            <div className="font-light sm:text-xs md:text-sm">Hello, I am</div>
-            <div className="font-bold sm:text-lg md:text-2xl">
+            <div className="font-light custom-text-black sm:text-xs md:text-sm">
+              Hello, I am
+            </div>
+            <div className="font-bold custom-text-black sm:text-lg md:text-2xl">
               Isoboye Vincent Isoboye
             </div>
-            <div className="font-light text-base lg:text-2xl mb-5 sm:mb-7">
+            <div className="font-light custom-text-black text-base lg:text-2xl mb-5 sm:mb-7">
               Full Stack Developer
             </div>
             <div className="flex gap-2">
               <div className="">
-                <Button>
+                <Button className="">
                   {' '}
                   <Download size={16} /> Download CV
                 </Button>
@@ -77,9 +79,9 @@ const TopModalTexts = () => {
             />
             <RoundedButtonWithLink
               size={120}
-              bgColor="black"
-              textColor="stone-50"
-              hoverColor="hover:bg-gray-800"
+              bgColor="bg-gray-900"
+              textColor="text-white"
+              hoverColor="bg-gray-800"
               url="#experience"
               text="Experience"
             />
