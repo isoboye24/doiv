@@ -67,13 +67,13 @@ const Footer = () => {
                   icon={faInstagram}
                   bgColor={color}
                   size={20}
-                  url="https://www.facebook.com/isoboye.vincent/"
+                  url="https://www.instagram.com/isoboye_vincent/"
                 />
                 <SocialMedia
                   icon={faXing}
                   bgColor={color}
                   size={20}
-                  url="https://www.facebook.com/isoboye.vincent/"
+                  url="https://www.xing.com/profile/IsoboyeVincent_DanObu/"
                 />
               </div>
             </div>

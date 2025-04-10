@@ -7,9 +7,9 @@ const TopModalTexts = () => {
   return (
     <>
       <div className="grid grid-rows-[4fr, 1fr] items-center md:bg-amber-500 justify-center z-12 mt-7 sm:mt-0 mb-10 sm:mb-0 rounded-tr-4xl rounded-br-4xl">
-        <div className="flex">
+        <div className="flex items-center justify-center">
           <div className="grid text-center ">
-            <div className="font-light custom-text-black sm:text-xs md:text-sm">
+            <div className="font-light text-center custom-text-black sm:text-xs md:text-sm">
               Hello, I am
             </div>
             <div className="font-bold custom-text-black sm:text-lg md:text-2xl">
@@ -61,7 +61,43 @@ const TopModalTexts = () => {
             />
           </div>
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden lg:block xl:hidden">
+          <div className="flex gap-2 lg:gap-4">
+            <RoundedButtonWithLink
+              size={100}
+              bgColor="bg-teal-500"
+              textColor="text-gray-50"
+              hoverColor="hover:bg-teal-700"
+              url="#about"
+              text="About"
+            />
+            <RoundedButtonWithLink
+              size={100}
+              bgColor="bg-white"
+              textColor="text-gray-900"
+              hoverColor="hover:bg-gray-300"
+              url="#projects"
+              text="Projects"
+            />
+            <RoundedButtonWithLink
+              size={100}
+              bgColor="bg-black"
+              textColor="text-gray-50"
+              hoverColor="hover:bg-gray-800"
+              url="#experience"
+              text="Experience"
+            />
+            <RoundedButtonWithLink
+              size={100}
+              bgColor="bg-lime-700"
+              textColor="text-gray-50"
+              hoverColor="hover:bg-lime-800"
+              url="#skills"
+              text="Skills"
+            />
+          </div>
+        </div>
+        <div className="hidden xl:block">
           <div className="flex gap-2 lg:gap-4">
             <RoundedButtonWithLink
               size={120}

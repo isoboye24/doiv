@@ -9,10 +9,8 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      <div className="grid grid-rows-2 md:grid-rows-1">
-        <main className="">{children}</main>
-        <Footer />
-      </div>
+      <main className="">{children}</main>
+      <Footer />
     </>
   );
 }

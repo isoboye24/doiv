@@ -6,7 +6,7 @@ import TopModalTexts from './top-modal-texts';
 const TopModal = () => {
   return (
     <>
-      <div className="absolute top-[15%] md:top-[20%] bg-gray-100 w-[90%] sm:h-[80%] md:h-[50%] lg:h-[70%] z-11 rounded-4xl md:shadow-2xl">
+      <div className="absolute top-[10vh] md:top-[15vh] bg-gray-50 w-[90vw] sm:h-[80vh] md:h-[70vh] z-11 rounded-4xl md:shadow-2xl">
         <div className="relative grid md:grid-cols-2 sm:grid-cols-1 h-full overflow-hidden">
           {/* Left Block */}
           <div className="mt-10 md:mt-0 flex items-center justify-center z-12">
