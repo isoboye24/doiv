@@ -6,7 +6,7 @@ import RoundedButtonWithLink from './rounded-button';
 const TopModalTexts = () => {
   return (
     <>
-      <div className="grid grid-rows-[4fr, 1fr] items-center md:bg-amber-500 justify-center z-12 mt-7 sm:mt-0 rounded-tr-4xl rounded-br-4xl">
+      <div className="grid grid-rows-[4fr, 1fr] items-center md:bg-amber-500 justify-center z-12 mt-7 sm:mt-0 mb-10 sm:mb-0 rounded-tr-4xl rounded-br-4xl">
         <div className="flex">
           <div className="grid text-center ">
             <div className="font-light custom-text-black sm:text-xs md:text-sm">
@@ -20,13 +20,15 @@ const TopModalTexts = () => {
             </div>
             <div className="flex gap-2">
               <div className="">
-                <Button className="">
+                <Button className="bg-black hover:bg-gray-800 text-gray-50">
                   {' '}
                   <Download size={16} /> Download CV
                 </Button>
               </div>
               <div className="">
-                <Button>Contact Info</Button>
+                <Button className="bg-black hover:bg-gray-800 text-gray-50">
+                  Contact Info
+                </Button>
               </div>
             </div>
           </div>
@@ -52,7 +54,7 @@ const TopModalTexts = () => {
             <RoundedButtonWithLink
               size={80}
               bgColor="bg-white"
-              textColor="text-gray-900"
+              textColor="text-black"
               hoverColor="hover:bg-gray-300"
               url="#skills"
               text="Skills"
@@ -79,16 +81,16 @@ const TopModalTexts = () => {
             />
             <RoundedButtonWithLink
               size={120}
-              bgColor="bg-gray-900"
-              textColor="text-white"
-              hoverColor="bg-gray-800"
+              bgColor="bg-black"
+              textColor="text-gray-50"
+              hoverColor="hover:bg-gray-800"
               url="#experience"
               text="Experience"
             />
             <RoundedButtonWithLink
               size={120}
               bgColor="bg-lime-700"
-              textColor="white"
+              textColor="text-gray-50"
               hoverColor="hover:bg-lime-800"
               url="#skills"
               text="Skills"

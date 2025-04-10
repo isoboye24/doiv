@@ -3,7 +3,7 @@ import { default as MobileMenu } from './menu';
 import Image from 'next/image';
 import Link from 'next/link';
 import { APP_NAME } from '../../../../lib/constants';
-import { MainNav } from './main-nav';
+import { MainNav } from './navbar';
 
 const Header = () => {
   return (

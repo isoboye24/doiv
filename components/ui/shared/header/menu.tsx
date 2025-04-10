@@ -1,5 +1,4 @@
-import { Menu as MenuIcon } from 'lucide-react';
-// import { Button } from '@/components/ui/button';
+import { Menu as MenuIcon, Globe } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -7,16 +6,14 @@ import {
   SheetTitle,
   SheetDescription,
 } from '@/components/ui/sheet';
-// import Link from 'next/link';
 import ModeToggle from './mode-toggle';
-// import Search from './search';
-import { MobileNav } from './main-nav';
+import { MobileNav } from './navbar';
 
 const Menu = () => {
   return (
     <>
       <div className="flex justify-center gap-3">
-        <nav className="md:flex hidden w-full max-w-xs gap-1"></nav>
+        <Globe size={16} className="mt-2.5" />
         <ModeToggle />
         <nav className="md:hidden">
           <Sheet>

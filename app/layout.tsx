@@ -4,6 +4,7 @@ import '@/assets/styles/globals.css';
 import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from '@/lib/constants';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from '@/components/ui/sonner';
+import '../lib/fontawesome';
 
 const inter = Inter({ subsets: ['latin'] });
 

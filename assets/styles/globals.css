@@ -247,3 +247,7 @@
 .bg-main-green {
   background-color: oklch(45.2% 0.095 166.913);
 }
+
+.custom-amber {
+  background-color: oklch(76.9% 0.188 70.08);
+}
