@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../button';
 import { Download } from 'lucide-react';
 import RoundedButtonWithLink from './rounded-button';
+import Link from 'next/link';
 
 const TopModalTexts = () => {
   return (
@@ -26,9 +27,11 @@ const TopModalTexts = () => {
                 </Button>
               </div>
               <div className="">
-                <Button className="bg-black hover:bg-gray-800 text-gray-50">
-                  Contact Info
-                </Button>
+                <Link href={'/contact'}>
+                  <Button className="bg-black hover:bg-gray-800 text-gray-50">
+                    Contact Info
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

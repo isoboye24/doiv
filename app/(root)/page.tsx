@@ -1,4 +1,5 @@
 import HomeTopSection from '@/components/ui/home/home-top-section';
+import AboutSection from './about-section';
 
 const HomePage = () => {
   return (
@@ -6,7 +7,9 @@ const HomePage = () => {
       <section className="min-h-[80dvh] lg:min-h-screen overflow-hidden">
         <HomeTopSection />
       </section>
-      <section className="bg-amber-600">About section</section>
+      <section className="">
+        <AboutSection />
+      </section>
     </div>
   );
 };

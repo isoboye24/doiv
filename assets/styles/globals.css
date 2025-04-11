@@ -251,3 +251,26 @@
 .custom-amber {
   background-color: oklch(76.9% 0.188 70.08);
 }
+
+/* globals.css or your CSS module */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: oklch(76.9% 0.188 70.08) #e5e7eb;
+}
+
+/* Chrome/Edge/Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: oklch(76.9% 0.188 70.08);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: oklch(76.9% 0.188 70.08);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
