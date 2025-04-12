@@ -1,0 +1,65 @@
+import React from 'react';
+import Image, { StaticImageData } from 'next/image';
+
+interface PolygonPictureFrameProps {
+  src: string | StaticImageData;
+  sides?: number;
+  size?: number; // Tailwind sizing like "w-64 h-64"
+  borderColor?: string;
+  borderWidth?: number; // In pixels
+}
+
+const PolygonPictureFrame: React.FC<PolygonPictureFrameProps> = ({
+  src,
+  sides = 6,
+  size = 300,
+  borderColor = '#f7aa05',
+  borderWidth = 8,
+}) => {
+  const generatePolygonClipPath = (sides: number) => {
+    const angle = (2 * Math.PI) / sides;
+    const points = Array.from({ length: sides }, (_, i) => {
+      const x = 50 + 50 * Math.cos(i * angle - Math.PI / 2);
+      const y = 50 + 50 * Math.sin(i * angle - Math.PI / 2);
+      return `${x}% ${y}%`;
+    }).join(', ');
+    return `polygon(${points})`;
+  };
+
+  return (
+    <div
+      className={`relative`}
+      style={{ height: `${size}px`, width: `${size}px` }}
+    >
+      {/* Outer Frame */}
+      <div
+        className="absolute inset-0"
+        style={{
+          clipPath: generatePolygonClipPath(sides),
+          backgroundColor: borderColor,
+        }}
+      ></div>
+
+      {/* Inner Image Container */}
+      <div
+        className="absolute inset-0 p-[8px]"
+        style={{
+          clipPath: generatePolygonClipPath(sides),
+          padding: borderWidth,
+          boxSizing: 'border-box',
+        }}
+      >
+        <Image
+          src={src}
+          alt="Framed Polygon"
+          className="w-full h-full object-cover"
+          style={{
+            clipPath: generatePolygonClipPath(sides),
+          }}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default PolygonPictureFrame;

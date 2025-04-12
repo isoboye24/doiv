@@ -6,7 +6,7 @@ const AboutTexts = () => {
     <>
       <div className="pr-0 md:pr-5 lg:pr-10">
         <SectionTitle title="About Me" />
-        <p className="text-justify pt-10">
+        <p className="text-justify">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea

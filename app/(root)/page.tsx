@@ -8,10 +8,10 @@ const HomePage = () => {
       <section className="min-h-[80dvh] lg:min-h-screen overflow-hidden">
         <HomeTopSection />
       </section>
-      <section className="py-20" id="about">
+      <section className="py-20 xl:pt-25 xl:pb-40" id="about">
         <AboutSection />
       </section>
-      <section className="py-20 bg-teal-600" id="projects">
+      <section className="py-20 xl:pt-25 xl:pb-40 bg-teal-600" id="projects">
         <ProjectSection />
       </section>
     </div>
