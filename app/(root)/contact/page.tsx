@@ -4,7 +4,7 @@ import PageTopSection from '@/components/ui/page-top-section';
 
 const Contact = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="">
       <PageTopSection pageName="Keep In Touch" bgColor="amber-500" />
       <ContactForm />
     </div>

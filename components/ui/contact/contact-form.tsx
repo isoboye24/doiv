@@ -5,16 +5,14 @@ import FormSection from './form-section';
 import ContactCard from './contact-card';
 
 import { Phone, Mail, CalendarDaysIcon, MapPinned } from 'lucide-react';
+import SectionTitle from '../shared/section-title';
 
 const ContactForm = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="">
       <div className="wrapper">
         <div className="flex flex-col items-center justify-center mb-10">
-          <h2 className="text-center text-dark text-bold text-2xl md:text-3xl">
-            Send me a message
-          </h2>
-          <hr className="w-[30%] md:w-[15%] lg:w-[10%] border-amber-500 border-2 mt-2" />
+          <SectionTitle title="Send me a message" />
         </div>
         <div className="flex items-center justify-center mb-2 md:mb-20">
           <FormSection />
