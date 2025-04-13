@@ -2,12 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-
-type BackgroundImageVideoProps = {
-  backgroundUrl: string;
-  isVideo?: boolean;
-  children: React.ReactNode;
-};
+import { BackgroundImageVideoProps } from '@/types';
 
 const BackgroundImageVideo: React.FC<BackgroundImageVideoProps> = ({
   backgroundUrl,

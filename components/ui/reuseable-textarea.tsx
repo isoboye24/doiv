@@ -1,14 +1,5 @@
 import React from 'react';
-
-interface TextareaProps {
-  label?: string;
-  name: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  placeholder?: string;
-  required?: boolean;
-  rows?: number;
-}
+import { TextareaProps } from '@/interfaces';
 
 const ReuseableTextarea: React.FC<TextareaProps> = ({
   label,

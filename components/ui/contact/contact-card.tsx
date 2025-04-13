@@ -1,14 +1,5 @@
 import React from 'react';
-import { LucideIcon } from 'lucide-react';
-
-type CardProps = {
-  title: string;
-  description1?: string;
-  description2?: string;
-  icon: LucideIcon;
-  iconColor?: string;
-  size?: number;
-};
+import { CardProps } from '@/types';
 
 const ContactCard: React.FC<CardProps> = ({
   title,

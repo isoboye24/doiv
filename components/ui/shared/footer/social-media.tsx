@@ -1,13 +1,6 @@
 import React from 'react';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-interface SocialMediaProps {
-  icon: IconProp;
-  size: number;
-  url: string;
-  bgColor?: string; // Tailwind class like 'bg-amber-500'
-}
+import { SocialMediaProps } from '@/interfaces';
 
 const SocialMedia: React.FC<SocialMediaProps> = ({
   icon,

@@ -1,13 +1,6 @@
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-
-interface PolygonPictureFrameProps {
-  src: string | StaticImageData;
-  sides?: number;
-  size?: number; // Tailwind sizing like "w-64 h-64"
-  borderColor?: string;
-  borderWidth?: number; // In pixels
-}
+import Image from 'next/image';
+import { PolygonPictureFrameProps } from '@/interfaces';
 
 const PolygonPictureFrame: React.FC<PolygonPictureFrameProps> = ({
   src,

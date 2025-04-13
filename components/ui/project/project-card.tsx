@@ -1,16 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-
-type CardProps = {
-  title: string;
-  description: string;
-  imageUrl?: string;
-  children?: React.ReactNode;
-};
+import { CardProps } from '@/types';
 
 const ProjectCard: React.FC<CardProps> = ({
   title,
-  description,
+  description1,
   imageUrl,
   children,
 }) => {
@@ -24,7 +18,7 @@ const ProjectCard: React.FC<CardProps> = ({
         />
       )}
       <h2 className="text-xl font-semibold mb-2">{title}</h2>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <p className="text-gray-600 mb-4">{description1}</p>
       {children}
     </div>
   );

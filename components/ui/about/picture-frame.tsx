@@ -1,14 +1,5 @@
-import Image, { StaticImageData } from 'next/image';
-
-interface PictureFrameProps {
-  src: string | StaticImageData;
-  rotation?: string;
-  zIndex?: string;
-  position?: string;
-  size?: number;
-  translateX?: string;
-  translateY?: string;
-}
+import Image from 'next/image';
+import { PictureFrameProps } from '@/interfaces';
 
 export default function PictureFrame({
   src,
