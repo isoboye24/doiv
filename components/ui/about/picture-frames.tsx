@@ -69,37 +69,6 @@ const PictureFrames = () => {
           />
         </div>
       </div>
-      <div className="md:hidden flex items-center justify-center p-10 ">
-        <div className="relative w-[100%] h-[300px] ">
-          <PictureFrame
-            src={Picture3}
-            rotation="rotate-30"
-            zIndex="z-20"
-            position="top-6 left-6"
-            size={130}
-            translateX="translate-x-0"
-            translateY="translate-y-30"
-          />
-          <PictureFrame
-            src={Picture1}
-            rotation="rotate-15"
-            zIndex="z-10"
-            position="top-3 left-3"
-            size={130}
-            translateX="translate-x-20"
-            translateY="translate-y-10"
-          />
-          <PictureFrame
-            src={Picture2}
-            rotation="rotate-0"
-            zIndex="z-30"
-            position="top-0 left-0"
-            size={130}
-            translateX="translate-x-0"
-            translateY="translate-y-0"
-          />
-        </div>
-      </div>
     </>
   );
 };
