@@ -11,7 +11,7 @@ export type CardProps = {
   title: string;
   description1?: string;
   description2?: string;
-  icon?: LucideIcon;
+  icon: LucideIcon;
   iconColor?: string;
   size?: number;
   imageUrl?: string | StaticImageData;
