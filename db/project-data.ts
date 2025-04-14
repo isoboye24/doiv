@@ -19,7 +19,7 @@ export const projectList: Project[] = [
   },
   {
     id: 2,
-    name: 'APC Management App',
+    name: 'APC App',
     previewUrl: '',
     image: APCAppImg,
     type: 'Desktop',

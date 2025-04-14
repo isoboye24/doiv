@@ -35,38 +35,38 @@ const AllProjects = <T extends string>({
       </div>
 
       {/* Mobile */}
-      <div className="md:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-[70vw]">
+      <div className=" grid md:hidden grid-cols-2 gap-4 w-[70vw]">
         {filteredProjects.map((project: Project) => (
           <a
             key={project.id}
-            className="flex text-white rounded-xl h-[380px] justify-center text-xl shadow-base"
-            href="/single-project"
+            className="flex text-white rounded-xl h-[150px] justify-center shadow-base text-base"
+            href="/projects/single-project"
           >
             <ProjectCard
               name={project.name}
               image={project.image}
               codeUrl={project.codeUrl}
               type={project.type}
-              size={300}
+              size={75}
             />
           </a>
         ))}
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="hidden md:grid md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-8">
         {filteredProjects.map((project: Project) => (
           <a
             key={project.id}
-            className=" text-white rounded-xl h-[380px] flex items-center justify-center text-xl shadow-base"
-            href="/single-project"
+            className=" text-white rounded-xl h-[300px] flex items-center justify-center text-xl shadow-base"
+            href="/projects/single-project"
           >
             <ProjectCard
               name={project.name}
               image={project.image}
               codeUrl={project.codeUrl}
               type={project.type}
-              size={300}
+              size={200}
             />
           </a>
         ))}
