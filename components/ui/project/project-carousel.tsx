@@ -2,18 +2,19 @@
 
 import React, { useState } from 'react';
 import CustomCarousel from '../project/custom-carousel';
-import { projectList } from '@/db/project-data';
 import ProjectCard from '../project/project-card';
 import { Project } from '@/types';
-import { Button } from '../button';
 import { ProjectSectionProps } from '@/interfaces';
+import { getFilterProjects } from '@/lib/actions/project.actions';
 
-const ProjectCarousel = ({ tab, types }: ProjectSectionProps) => {
-  const [activeType, setActiveType] = useState<'Web' | 'Desktop'>(types);
+const ProjectCarousel = <T extends string>({
+  tab,
+  types,
+}: ProjectSectionProps<T>) => {
+  const [activeType, setActiveType] =
+    useState<ProjectSectionProps['types']>(types);
 
-  const filteredProjects = projectList
-    .filter((project: Project) => project.type === activeType)
-    .slice(0, 3); // limit to 3
+  const filteredProjects = getFilterProjects({ activeType });
 
   return (
     <div>
@@ -72,14 +73,6 @@ const ProjectCarousel = ({ tab, types }: ProjectSectionProps) => {
             </div>
           ))}
         </CustomCarousel>
-      </div>
-
-      <div className="flex justify-center mt-0 xl:mt-10">
-        <a href="/projects">
-          <Button className="bg-amber-500 hover:bg-amber-400 text-gray-900 px-6 py-4 xl:px-10 xl:py-6 text-base md:text-lg xl:text-2xl">
-            View All
-          </Button>
-        </a>
       </div>
     </div>
   );

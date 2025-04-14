@@ -45,8 +45,7 @@ export interface PictureFrameProps {
   translateX?: string;
   translateY?: string;
 }
-
-export interface ProjectSectionProps {
-  tab: ('Web' | 'Desktop')[];
-  types: 'Web' | 'Desktop';
+export interface ProjectSectionProps<T extends string = string> {
+  tab: T[];
+  types: T;
 }
