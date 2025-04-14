@@ -12,7 +12,9 @@ const links = [
 export default function AdminSidebar() {
   return (
     <aside className="h-screen w-64 bg-teal-900 text-white p-4 flex flex-col border-r border-teal-800">
-      <a className="text-4xl text-center font-bold mb-6">D-OIV</a>
+      <a className="text-4xl text-center font-bold mb-6 text-amber-500">
+        D-OIV
+      </a>
       <nav className="flex-1 space-y-2">
         {links.map(({ href, label, icon }) => (
           <Link
