@@ -1,5 +1,6 @@
 module.exports = {
   theme: {
+    darkMode: 'class',
     extend: {
       rotate: {
         5: '5deg',
