@@ -1,6 +1,11 @@
 import HomeTopSection from '@/components/ui/home/home-top-section';
 import AboutSection from '../../components/ui/home/about-section';
 import ProjectSection from '@/components/ui/home/project-section';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 const HomePage = () => {
   return (

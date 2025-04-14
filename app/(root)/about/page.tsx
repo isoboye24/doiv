@@ -1,10 +1,15 @@
 import React from 'react';
 import PageTopSection from '@/components/ui/page-top-section';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 const About = () => {
   return (
     <div>
-      <PageTopSection pageName="About Me" bgColor="amber-500" />
+      <PageTopSection pageName="About Me" bgColor="teal-600" />
     </div>
   );
 };

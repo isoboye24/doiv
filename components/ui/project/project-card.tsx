@@ -1,24 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
-import { CardProps } from '@/types';
+import { Project } from '@/types';
 
-const ProjectCard: React.FC<CardProps> = ({
-  title,
-  description1,
-  imageUrl,
-  children,
-}) => {
+const ProjectCard: React.FC<Project> = ({ name, image, size, children }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105 p-4">
-      {imageUrl && (
+    <div className="bg-gray-200 rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105 p-4">
+      {
         <Image
-          src={imageUrl}
-          alt={title}
-          className="w-full h-48 object-cover rounded-lg mb-4"
+          src={image}
+          alt={name}
+          className="w-full object-cover rounded-lg mb-4"
+          style={{ height: `${size}px` }}
         />
-      )}
-      <h2 className="text-xl font-semibold mb-2">{title}</h2>
-      <p className="text-gray-600 mb-4">{description1}</p>
+      }
+      <h2 className="text-xl font-semibold mb-2 text-gray-950">{name}</h2>
+
       {children}
     </div>
   );

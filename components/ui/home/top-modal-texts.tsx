@@ -7,7 +7,7 @@ import Link from 'next/link';
 const TopModalTexts = () => {
   return (
     <>
-      <div className="grid grid-rows-[4fr, 1fr] items-center md:bg-amber-500 justify-center z-12 mt-7 sm:mt-0 mb-10 sm:mb-0 rounded-tr-4xl rounded-br-4xl">
+      <div className="grid grid-rows-[4fr, 1fr] items-center md:bg-teal-600 justify-center z-12 mt-7 sm:mt-0 mb-10 sm:mb-0 rounded-tr-4xl rounded-br-4xl">
         <div className="flex items-center justify-center">
           <div className="grid text-center ">
             <div className="font-light text-center custom-text-black sm:text-xs md:text-sm">
@@ -40,9 +40,9 @@ const TopModalTexts = () => {
           <div className="flex gap-2 lg:gap-4 items-center justify-center">
             <RoundedButtonWithLink
               size={80}
-              bgColor="bg-teal-500"
-              textColor="text-gray-50"
-              hoverColor="hover:bg-teal-700"
+              bgColor="bg-amber-600"
+              textColor="text-gray-900"
+              hoverColor="hover:bg-amber-700"
               url="#about"
               text="About"
             />
@@ -68,9 +68,9 @@ const TopModalTexts = () => {
           <div className="flex gap-2 lg:gap-4">
             <RoundedButtonWithLink
               size={100}
-              bgColor="bg-teal-500"
-              textColor="text-gray-50"
-              hoverColor="hover:bg-teal-700"
+              bgColor="bg-amber-600"
+              textColor="text-gray-900"
+              hoverColor="hover:bg-amber-700"
               url="#about"
               text="About"
             />
@@ -104,9 +104,9 @@ const TopModalTexts = () => {
           <div className="flex gap-2 lg:gap-4">
             <RoundedButtonWithLink
               size={120}
-              bgColor="bg-teal-500"
-              textColor="text-gray-50"
-              hoverColor="hover:bg-teal-700"
+              bgColor="bg-amber-600"
+              textColor="text-gray-900"
+              hoverColor="hover:bg-amber-700"
               url="#about"
               text="About"
             />

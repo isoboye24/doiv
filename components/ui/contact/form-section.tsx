@@ -68,7 +68,7 @@ const FormSection = () => {
           <Button
             type="submit"
             size="lg"
-            className="button w-[20vw] lg:w-[15vw] 2xl:w-[8vw] bg-teal-600"
+            className="button w-[20vw] lg:w-[15vw] 2xl:w-[8vw] bg-teal-500 hover:bg-teal-600"
           >
             Submit
           </Button>

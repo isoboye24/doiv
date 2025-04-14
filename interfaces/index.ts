@@ -45,3 +45,8 @@ export interface PictureFrameProps {
   translateX?: string;
   translateY?: string;
 }
+
+export interface ProjectSectionProps {
+  tab: ('Web' | 'Desktop')[];
+  types: 'Web' | 'Desktop';
+}
