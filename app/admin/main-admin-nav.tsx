@@ -19,15 +19,13 @@ export default function MainAdminNav({
         >
           <Menu className="w-6 h-6 text-gray-700 dark:text-gray-200" />
         </button>
-        <h2 className="text-xl font-semibold bg-white text-black dark:bg-gray-800 dark:text-white">
-          Admin Dashboard
-        </h2>
+
         <a
           href="https://doiv.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h3 className="text-green-500">View Site</h3>
+          <h3 className="text-green-500">Site</h3>
         </a>
       </div>
 
