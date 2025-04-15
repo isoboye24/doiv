@@ -38,7 +38,9 @@ const Categories = () => {
                   <Button>Edit</Button>
                 </a>
                 <a href={`/admin/categories/id`}>
-                  <Button className="bg-red-800 text-gray-200">Delete</Button>
+                  <Button className="bg-red-800 text-gray-200 hover:bg-red-700">
+                    Delete
+                  </Button>
                 </a>
               </TableCell>
             </TableRow>
