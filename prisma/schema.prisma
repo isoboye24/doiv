@@ -19,14 +19,14 @@ model User {
 }
 
 model Category {
-  id                 Int                    @id @default(autoincrement())
+  id                 String                 @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   categoryName       String
   project            ProjectsOnCategories[]
   SkillsOnCategories SkillsOnCategories[]
 }
 
 model Message {
-  id          Int      @id @default(autoincrement())
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   senderName  String
   senderEmail String
   messageText String
@@ -35,7 +35,7 @@ model Message {
 }
 
 model Project {
-  id               Int                    @id @default(autoincrement())
+  id               String                 @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   projectName      String
   category         ProjectsOnCategories[]
   image            Image[]
@@ -48,9 +48,9 @@ model Project {
 
 model ProjectsOnCategories {
   category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-  categoryId Int
+  categoryId String
   project    Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  projectId  Int
+  projectId  String
 
   @@id([categoryId, projectId])
 }
@@ -58,7 +58,7 @@ model ProjectsOnCategories {
 model Image {
   id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   caption   String?
-  projectId Int
+  projectId String
   project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
   date      DateTime @default(now()) @db.Timestamp(6)
 }
@@ -69,16 +69,16 @@ enum Role {
 }
 
 model Skill {
-  id        Int                  @id @default(autoincrement())
+  id        String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   skillName String
   category  SkillsOnCategories[]
 }
 
 model SkillsOnCategories {
   skill      Skill    @relation(fields: [skillId], references: [id], onDelete: Cascade)
-  skillId    Int
+  skillId    String
   category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
-  categoryId Int
+  categoryId String
 
   @@id([categoryId, skillId])
 }

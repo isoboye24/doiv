@@ -12,7 +12,7 @@ export async function createCategory(
 
     await prisma.category.create({
       data: {
-        name: validatedData.categoryName,
+        categoryName: validatedData.categoryName,
       },
     });
 
@@ -29,12 +29,18 @@ export async function updateCategory(
   data: z.infer<typeof updateCategorySchema>
 ) {
   try {
-    const validatedData = updateCategorySchema.parse(data);
+    const categoryItem = updateCategorySchema.parse(data);
+
+    const productExists = await prisma.category.findFirst({
+      where: { id: categoryItem.id },
+    });
+
+    if (!productExists) throw new Error('Product not found');
 
     await prisma.category.update({
-      where: { id: validatedData.id },
+      where: { id: categoryItem.id },
       data: {
-        name: validatedData.categoryName,
+        categoryName: categoryItem.categoryName,
       },
     });
 

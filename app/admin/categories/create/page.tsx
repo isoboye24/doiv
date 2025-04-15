@@ -1,5 +1,10 @@
 import CategoryFom from '@/app/admin/categoryFom';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Create Category',
+};
 
 const Create = () => {
   return (
