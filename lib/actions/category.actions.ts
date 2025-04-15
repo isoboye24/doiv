@@ -1,7 +1,6 @@
 import { z } from 'zod';
-import { insertCategorySchema } from '../validator';
+import { insertCategorySchema, updateCategorySchema } from '../validator';
 import { formatError } from '../utils';
-import { revalidatePath } from 'next/cache';
 import { prisma } from '@/db/prisma';
 
 // Create Category
@@ -11,18 +10,37 @@ export async function createCategory(
   try {
     const validatedData = insertCategorySchema.parse(data);
 
-    // Create category in DB
     await prisma.category.create({
       data: {
         name: validatedData.categoryName,
       },
     });
 
-    revalidatePath('/admin/categories');
-
     return {
       success: true,
       message: 'Category created successfully',
+    };
+  } catch (error) {
+    return { success: false, message: formatError(error) };
+  }
+}
+
+export async function updateCategory(
+  data: z.infer<typeof updateCategorySchema>
+) {
+  try {
+    const validatedData = updateCategorySchema.parse(data);
+
+    await prisma.category.update({
+      where: { id: validatedData.id },
+      data: {
+        name: validatedData.categoryName,
+      },
+    });
+
+    return {
+      success: true,
+      message: 'Category updated successfully',
     };
   } catch (error) {
     return { success: false, message: formatError(error) };

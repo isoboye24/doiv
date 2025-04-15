@@ -1,5 +1,7 @@
+import { insertCategorySchema } from '@/lib/validator';
 import { LucideIcon } from 'lucide-react';
 import { StaticImageData } from 'next/image';
+import { z } from 'zod';
 
 export type BackgroundImageVideoProps = {
   backgroundUrl: string;
@@ -35,4 +37,8 @@ export type Project = {
 
 export type CarouselProps = {
   children: React.ReactNode;
+};
+
+export type Category = z.infer<typeof insertCategorySchema> & {
+  id: string;
 };
