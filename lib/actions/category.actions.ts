@@ -1,3 +1,5 @@
+'use server';
+
 import { z } from 'zod';
 import { insertCategorySchema, updateCategorySchema } from '../validator';
 import { formatError } from '../utils';
@@ -9,10 +11,11 @@ export async function createCategory(
 ) {
   try {
     const validatedData = insertCategorySchema.parse(data);
+    console.log('Data sent to prisma.category.create:', validatedData);
 
     await prisma.category.create({
       data: {
-        categoryName: validatedData.categoryName,
+        name: validatedData.name,
       },
     });
 
@@ -25,6 +28,7 @@ export async function createCategory(
   }
 }
 
+// Update Category
 export async function updateCategory(
   data: z.infer<typeof updateCategorySchema>
 ) {
@@ -35,12 +39,12 @@ export async function updateCategory(
       where: { id: categoryItem.id },
     });
 
-    if (!productExists) throw new Error('Product not found');
+    if (!productExists) throw new Error('Category not found');
 
     await prisma.category.update({
       where: { id: categoryItem.id },
       data: {
-        categoryName: categoryItem.categoryName,
+        name: categoryItem.name,
       },
     });
 

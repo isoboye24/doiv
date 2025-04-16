@@ -12,7 +12,7 @@ import {
 import { useRouter } from 'next/navigation';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { insertCategorySchema, updateCategorySchema } from '@/lib/validator';
+import { insertCategorySchema } from '@/lib/validator';
 import { ControllerRenderProps, SubmitHandler, useForm } from 'react-hook-form';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
@@ -24,18 +24,16 @@ const CategoryFom = ({
   categoryId,
 }: {
   type: 'Create' | 'Update';
-  categoryId?: string;
+  categoryId: number;
 }) => {
   const router = useRouter();
 
-  type CategoryFormType =
-    | z.infer<typeof updateCategorySchema>
-    | z.infer<typeof insertCategorySchema>;
+  // type CategoryFormType =
+  //   | z.infer<typeof insertCategorySchema>
+  //   | z.infer<typeof updateCategorySchema>;
 
-  const form = useForm<CategoryFormType>({
-    resolver: zodResolver(
-      type === 'Update' ? updateCategorySchema : insertCategorySchema
-    ),
+  const form = useForm<z.infer<typeof insertCategorySchema>>({
+    resolver: zodResolver(insertCategorySchema),
   });
 
   const onSubmit: SubmitHandler<z.infer<typeof insertCategorySchema>> = async (
@@ -57,7 +55,7 @@ const CategoryFom = ({
         return;
       }
 
-      const res = await updateCategory({ ...values, id: categoryId });
+      const res = await updateCategory({ ...values, id: categoryId! });
       if (!res.success) {
         toast.error(res.message);
       } else {
@@ -79,17 +77,17 @@ const CategoryFom = ({
             {/* Category name */}
             <FormField
               control={form.control}
-              name="categoryName"
+              name="name"
               render={({
                 field,
               }: {
                 field: ControllerRenderProps<
                   z.infer<typeof insertCategorySchema>,
-                  'categoryName'
+                  'name'
                 >;
               }) => (
                 <FormItem className="w-full">
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Category</FormLabel>
                   <FormControl>
                     <Input placeholder="Enter Category" {...field} />
                   </FormControl>
