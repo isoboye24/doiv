@@ -12,7 +12,7 @@ const Create = () => {
       <h2 className="h2-bold">Create Category</h2>
       <div className="my-8 flex justify-center items-center">
         <div className="w-[70vw]">
-          <CategoryFom type="Create" categoryId="1" />
+          <CategoryFom type="Create" />
         </div>
       </div>
     </div>

@@ -13,6 +13,14 @@ export async function createCategory(
     const validatedData = insertCategorySchema.parse(data);
     console.log('Data sent to prisma.category.create:', validatedData);
 
+    const nameExists = await prisma.category.findFirst({
+      where: { name: validatedData.name },
+    });
+
+    if (nameExists) {
+      throw new Error('Category name already exists');
+    }
+
     await prisma.category.create({
       data: {
         name: validatedData.name,
@@ -35,11 +43,19 @@ export async function updateCategory(
   try {
     const categoryItem = updateCategorySchema.parse(data);
 
-    const productExists = await prisma.category.findFirst({
+    const categoryExists = await prisma.category.findFirst({
       where: { id: categoryItem.id },
     });
 
-    if (!productExists) throw new Error('Category not found');
+    if (!categoryExists) throw new Error('Category not found');
+
+    const nameExists = await prisma.category.findFirst({
+      where: { name: categoryItem.name },
+    });
+
+    if (nameExists) {
+      throw new Error('Category name already exists');
+    }
 
     await prisma.category.update({
       where: { id: categoryItem.id },

@@ -24,7 +24,7 @@ const CategoryFom = ({
   categoryId,
 }: {
   type: 'Create' | 'Update';
-  categoryId: number;
+  categoryId?: number;
 }) => {
   const router = useRouter();
 
