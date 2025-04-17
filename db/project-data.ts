@@ -27,7 +27,7 @@ export const projectList: Project[] = [
   },
   {
     id: 3,
-    name: 'Ecommerce App',
+    name: 'Web Shop',
     previewUrl: '',
     image: EcommerceAppImg,
     type: 'Web',

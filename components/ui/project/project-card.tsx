@@ -6,17 +6,17 @@ const ProjectCard: React.FC<Project> = ({ name, image, size, children }) => {
   return (
     <a
       href="/projects/single-project"
-      className="bg-gray-200 rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105 p-4"
+      className="bg-gray-100 shadow-md overflow-hidden transition-transform hover:scale-105 p-2 md:p-4"
     >
       {
         <Image
           src={image}
           alt={name}
-          className="w-full object-cover rounded-md mb-4"
+          className="w-full object-cover rounded-md mb-2"
           style={{ height: `${size}px` }}
         />
       }
-      <h2 className="text-sm md:text-base lg:text-xl lg:font-semibold mb-2 text-gray-950">
+      <h2 className="text-xs md:text-base lg:text-xl lg:font-semibold mb-1 text-gray-950">
         {name}
       </h2>
 

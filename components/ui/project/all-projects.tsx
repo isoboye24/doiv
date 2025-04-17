@@ -35,11 +35,11 @@ const AllProjects = <T extends string>({
       </div>
 
       {/* Mobile */}
-      <div className=" grid md:hidden grid-cols-2 gap-4 w-[70vw]">
+      <div className="grid md:hidden grid-cols-2 gap-4 w-[70vw]">
         {filteredProjects.map((project: Project) => (
           <a
             key={project.id}
-            className="flex text-white rounded-xl h-[150px] justify-center shadow-base text-base"
+            className="flex text-white rounded-xl h-[165px] justify-center shadow-base text-xs"
             href="/projects/single-project"
           >
             <ProjectCard
@@ -47,7 +47,7 @@ const AllProjects = <T extends string>({
               image={project.image}
               codeUrl={project.codeUrl}
               type={project.type}
-              size={75}
+              size={120}
             />
           </a>
         ))}
