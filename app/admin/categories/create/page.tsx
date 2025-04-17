@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Create Category',
 };
 
-const Create = () => {
+const CreateCategory = () => {
   return (
     <div className="">
       <h2 className="h2-bold">Create Category</h2>
@@ -19,4 +19,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default CreateCategory;

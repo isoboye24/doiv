@@ -8,13 +8,18 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'List of Categories',
+};
 
 const Categories = () => {
   return (
     <div className="space-y-2">
       <div className="flex-between">
         <div className="flex gap-3">
-          <h1 className="h2-bold text-center">Categories</h1>
+          <h1 className="h2-bold text-center">List of Categories</h1>
         </div>
         <a href="/admin/categories/create" className="">
           <Button variant="default">Create Category</Button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import AllProjects from './all-projects';
+import AllProjects from '@/components/ui/project/all-projects';
 
 const ProjectPageCarousel = () => {
   return (
